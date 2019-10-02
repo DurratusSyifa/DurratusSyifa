@@ -50,15 +50,17 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group row">
+
+                         <div class="form-group row">
                             <label for="captcha" class="col-md-4 col-form-label text-md-right">{{ __('captcha') }}</label>
 
                             <div class="col-md-6">
-                             <div class="captcha">
-                                <span>{!! captcha_img () !!}</span>
-                                <button type="button" class=" btn btn-success btn-refresh">refresh</button>
-                            </div>
-                            
+                                <div class="captcha">
+                                    <span>{!! captcha_img() !!}</span>
+                                    <button type="button" class="btn btn-refresh">Refresh</button>
+
+                                </div>
+
                                 <input id="captcha" type="text" class="form-control mt-2 @error('captcha') is-invalid @enderror" name="captcha" placeholder="Enter captcha">
 
                                 @error('captcha')
@@ -68,7 +70,6 @@
                                 @enderror
                             </div>
                         </div>
-
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">

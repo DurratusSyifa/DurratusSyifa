@@ -38,11 +38,12 @@
                                 @enderror
                             </div>
                         </div>
+
                         <div class="form-group row">
-                            <label for="contact" class="col-md-4 col-form-label text-md-right">{{ __('Contact') }}</label>
+                            <label for="contact" class="col-md-4 col-form-label text-md-right">{{ __('contact') }}</label>
 
                             <div class="col-md-6">
-                                <input id="contact" type="number " class="form-control @error('contact') is-invalid @enderror" name="contact" value="{{ old('contact')}}" required autocomplete="contact">
+                                <input id="contact" type="number" class="form-control @error('contact') is-invalid @enderror" name="contact" value="{{ old('contact') }}" required autocomplete="contact">
 
                                 @error('contact')
                                     <span class="invalid-feedback" role="alert">
@@ -65,6 +66,7 @@
                                 @enderror
                             </div>
                         </div>
+
                         <div class="form-group row">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
@@ -83,18 +85,19 @@
                                     <br>
 
                                     <button type="button" class="btn btn-success btn-refresh">Refresh</button>
-                                </div>
-                                <input type="text" id="captcha" class="form-control" placeholder="Enter captcha" name="captcha">
+                                <div>
+                                    <br>
+                                <input type="text" id="captcha" class="form-control" placeholder="Enter Catpcha" name="captcha"> 
                                 @if ($errors->has('captcha'))
-                                    <span class="help-block">
+                                    <span classs="help-block">
                                         <strong>{{ $errors->first('captcha')}}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
-
+                            <br>
                         <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
+                            <div class="col-md-0 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
