@@ -6,6 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">List Kategori Pengumuman</div>
+                <a href="{!! route('kategori_galeri.create') !!}" class="btn btn-primary">Tambah Data</a>
 
                 <div class="card-body">
                		 <table border="1">

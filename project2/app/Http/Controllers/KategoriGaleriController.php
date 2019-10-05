@@ -13,7 +13,7 @@ class KategoriGaleriController extends Controller
 
     	//blade
     	return view('kategori_galeri.index',compact('listKategoriGaleri'));
-    	//return view( view: 'kategori_galeri.index')->with('data',$listKategoriBerita);
+    	//return view( view: 'kategori_galeri.index')->with('data',$listKategoriGaleri);
     }
 
     public function show($id){
@@ -23,4 +23,17 @@ class KategoriGaleriController extends Controller
 
     	return view('kategori_galeri.show',compact('KategoriGaleri'));
     }
+
+    public function create(){
+        return view('kategori_galeri.create');
+    }
+
+    public function store(Request $request){
+        $input= $request->all();
+
+        KategoriGaleri::create($input);
+
+        return redirect(route('kategori_galeri.index'));
+    }
+
 }
